@@ -42,23 +42,25 @@
             </div>
         </div>
         <div class="row">
+
+            {% for course in courses %}
+
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="single-course">
                     <div class="course-head overlay">
-                        <img src="{% static 'images/courses/course1.jpg' %}" alt="#">
+                        <img src="{{course.picture.url}}" alt="#">
                         <a href="#" class="btn white primary">Hozir ro'yxatdan o'ting</a>
                     </div>
                     <div class="course-body">
                         <div class="name-price">
                             <div class="teacher-info">
-                                <img src="{% static 'images/author1.jpg' %}" alt="#">
-                                <h4 class="title">Jewel Mathies</h4>
+                                <img src="{{course.teacher.profile_picture.url}}" alt="#">
+                                <h4 class="title">{{course.teacher.full_name}}</h4>
                             </div>
-                            <span class="price">$350</span>
+                            <span class="price">${{course.price}}</span>
                         </div>
-                        <h4 class="c-title"><a href="#">Asosiy Veb Dizayn Kursi 2019 (a-z)</a></h4>
-                        <p>Natus voluptatibus perferendis repellendus Amet rerum quis odioThe ship set ground on the
-                            shore of this uncharted Gilligan consequa</p>
+                        <h4 class="c-title"><a href="#">{{course.title}}</a></h4>
+                        <p>{{course.description}}</p>
                     </div>
                     <div class="course-meta">
                         <ul class="rattings">
@@ -67,17 +69,19 @@
                             <li><i class="fa fa-star"></i></li>
                             <li><i class="fa fa-star"></i></li>
                             <li><i class="fa fa-star-half-o"></i></li>
-                            <li class="point"><span>4.5</span></li>
+                            <li class="point"><span>{{course.rank}}</span></li>
                         </ul>
                         <div class="course-info">
-                            <span><i class="fa fa-users"></i>2.4k Talabalar</span>
-                            <span><i class="fa fa-calendar-o"></i>2 Oy</span>
-                            <span><i class="fa fa-clock-o"></i>09:30 - 12:00</span>
+                            <span><i class="fa fa-users"></i>{{course.enrolled_students}} Enrolled</span>
+                            <span><i class="fa fa-calendar-o"></i>{{course.enrolled_students}} days</span>
+                            <span><i class="fa fa-clock-o"></i>{{course.start_date}} - {{course.end_date}}</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Rest of the code... -->
+
+            {% endfor %}
+
         </div>
     </div>
 </section>
@@ -160,44 +164,27 @@
                 </div>
             </div>
             <div class="col-lg-7 col-12">
+
+                {% for event in events %}
+
                 <div class="coming-event">
                     <div class="single-event">
                         <div class="event-date">
-                            <p>23<span>Mart</span></p>
+                            <p>
+                                {{ event.date|date:"d" }}<span>{{ event.date|date:"M" }}</span>
+                            </p>
                         </div>
                         <div class="event-content">
-                            <h3 class="event-title"><a href="#">Qabul Bayrami Bahori 2019</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies
-                                tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo</p>
-                            <span class="entry-date-time"><i class="fa fa-clock-o" aria-hidden="true"></i> 05:23 AM -
-                                09:23 AM </span>
-                        </div>
-                    </div>
-                    <div class="single-event">
-                        <div class="event-date">
-                            <p>25<span>Aprel</span></p>
-                        </div>
-                        <div class="event-content">
-                            <h3 class="event-title"><a href="#">Xalqaro Veb Dasturlash Muhimlari!</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies
-                                tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo</p>
-                            <span class="entry-date-time"><i class="fa fa-clock-o" aria-hidden="true"></i> 05:23 AM -
-                                09:23 AM </span>
-                        </div>
-                    </div>
-                    <div class="single-event">
-                        <div class="event-date">
-                            <p>05<span>Iyun</span></p>
-                        </div>
-                        <div class="event-content">
-                            <h3 class="event-title"><a href="#">Aktualizatsiya Tarmoqlari Seminar</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies
-                                tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo</p>
-                            <span class="entry-date-time"><i class="fa fa-clock-o" aria-hidden="true"></i> 05:23 AM -
-                                09:23 AM </span>
+                            <h3 class="event-title"><a href="#">{{ event.title }}</a></h3>
+                            <p>{{ event.description}}</p>
+                            <span class="entry-date-time"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                                {{ event.start_time|date:"h:i A" }} at {{ event.end_time|date:"h:i A" }}
+                            </span>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
+
             </div>
         </div>
     </div>
