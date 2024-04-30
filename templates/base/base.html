@@ -1,0 +1,44 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="286-IDUM maktabi, toshkent davlat maktabi, 286-IDUM">
+    <meta name="description" content="">
+    <meta name='copyright' content=''>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>286-IDUM</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    {% block css %}
+    {% include 'base/css.html' %}
+    {% endblock css %}
+</head>
+
+<body>
+    {% block header %}
+    {% include 'base/header.html' %}
+    {% endblock header %}
+    <!-- Content Wrapper. Contains page content -->
+
+    {% block content %}
+
+    {% endblock content %}
+    <!-- /.content-wrapper -->
+</body>
+
+{% block footer %}
+{% include 'base/footer.html' %}
+{% endblock footer %}
+
+
+{% block js %}
+{% include 'base/js.html' %}
+{% endblock js %}
+{% load static %}
+
+
+</html>

@@ -1,0 +1,70 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+
+<div class="breadcrumbs overlay" style="background-image:url('{% static 'images/breadcrumb-bg.jpg' %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+                <h2>Bizning kurslar</h2>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <ul class="bread-list">
+                    <li><a href="/">Asosiy<i class="fa fa-angle-right"></i></a></li>
+                    <li class="active"><a href="#">Kurslarimiz<i class="fa fa-angle-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="courses archive section">
+    <div class="container">
+        <div class="row">
+
+            {% for course in courses %}
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="single-course">
+                    <div class="course-head overlay">
+                        <img src="{{course.picture.url}}" alt="#">
+                        <a href="#" class="btn white primary">Hozirpq ro'yxatdan o'ting</a>
+                    </div>
+                    <div class="course-body">
+                        <div class="name-price">
+                            <div class="teacher-info">
+                                <img src="{{course.teacher.profile_picture.url}}" alt="#">
+                                <h4 class="title">{{course.teacher.full_name}}</h4>
+                            </div>
+                            <span class="price">${{course.price}}</span>
+                        </div>
+                        <h4 class="c-title"><a href="#">{{course.description}}</p>
+                    </div>
+                    <div class="course-meta">
+                        <ul class="rattings">
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star-half-o"></i></li>
+                            <li class="point"><span>{{course.rank}}</span></li>
+                        </ul>
+                        <div class="course-info">
+                            <span><i class="fa fa-users"></i>{{course.enrolled_students}} Enrolled</span>
+                            <span><i class="fa fa-calendar-o"></i>{{course.enrolled_students}} days</span>
+                            <span><i class="fa fa-clock-o"></i>{{course.start_date}} - {{course.end_date}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

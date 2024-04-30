@@ -1,0 +1,67 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+
+<div class="breadcrumbs overlay" style="background-image:url('{% static 'images/breadcrumb-bg.jpg' %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+                <h2>Upcoming Events</h2>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <ul class="bread-list">
+                    <li><a href="/">Home<i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#">Events<i class="fa fa-angle-right"></i></a></li>
+                    <li class="active"><a href="{% url 'event_list' %}">Events</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<section class="events archive section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 col-12">
+                <div class="section-title bg">
+                    <h2>Upcoming <span>Events</span></h2>
+                    <p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own
+                        additions education satisfied the perpetual. If he cause manor happy</p>
+                    <div class="icon"><i class="fa fa-paper-plane"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            {% for event in events %}
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="single-event">
+                    <div class="event-image">
+                        <img src="{{ event.image.url }}" alt="#">
+                        <div class="event-date">
+                            <p>
+                                {{ event.date|date:"d" }}<span>{{ event.date|date:"M" }}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title"><a href="#">{{ event.title }}</a></h3>
+                        <p>{{ event.description}}</p>
+                        <span class="entry-date-time"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                            {{ event.start_time|date:"h:i A" }} at {{ event.end_time|date:"h:i A" }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
