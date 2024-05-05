@@ -2,6 +2,8 @@
 
 ### Usage:
 - Clone the repository
+- Create a virtual environment: `python -m venv venv`
+- Activate the virtual environment: `source venv/bin/activate`(Linux) or `venv\Scripts\activate`(Windows)
 - Install the requirements: `pip install -r requirements.txt`
 - Run migrations: `python manage.py makemigrations` and `python manage.py migrate`
 - Run the server using `python manage.py runserver` or just run `sh start.sh`
