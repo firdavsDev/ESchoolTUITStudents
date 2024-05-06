@@ -1400,8 +1400,8 @@ Version:	1.0
 }
 
 .events.archive .event-image img {
-	width: 100%;
-	height: 100%;
+	width: 614px;
+	height: 315px;
 }
 
 .events.archive .single-event:hover .event-image img {

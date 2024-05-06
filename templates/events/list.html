@@ -9,13 +9,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-12">
-                <h2>Upcoming Events</h2>
+                <h2>Tadbirlar</h2>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
                 <ul class="bread-list">
-                    <li><a href="/">Home<i class="fa fa-angle-right"></i></a></li>
-                    <li><a href="#">Events<i class="fa fa-angle-right"></i></a></li>
-                    <li class="active"><a href="{% url 'event_list' %}">Events</a></li>
+                    <li><a href="/">Asosiy<i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#">Yaqinda<i class="fa fa-angle-right"></i></a></li>
+                    <li class="active"><a href="{% url 'event_list' %}">EveTadbirlarnts</a></li>
                 </ul>
             </div>
         </div>
@@ -40,7 +40,7 @@
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="single-event">
                     <div class="event-image">
-                        <img src="{{ event.image.url }}" alt="#">
+                        <img src="{{ event.image.url }}" alt="#" width="614px" height="315px">
                         <div class="event-date">
                             <p>
                                 {{ event.date|date:"d" }}<span>{{ event.date|date:"M" }}</span>
