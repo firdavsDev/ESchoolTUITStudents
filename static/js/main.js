@@ -29,150 +29,150 @@ Version:	1.0
 * Preloader JS
 ========================================*/
 
-(function($) {
-    "use strict";
-     $(document).on('ready', function() {	
-	
+(function ($) {
+	"use strict";
+	$(document).on('ready', function () {
+
 		/*===============================
 			Search Form JS
 		=================================*/
-		$('.search-area .icon').on( "click", function(){
+		$('.search-area .icon').on("click", function () {
 			$('.search-area').toggleClass('active');
-		});		
-		
+		});
+
 		/*===============================
 			Mobile Menu JS
 		=================================*/
 		$('.menu').slicknav({
-			prependTo:".mobile-menu",
+			prependTo: ".mobile-menu",
 			duration: 600,
-			closeOnClick:true,
+			closeOnClick: true,
 		});
-		
+
 
 		/*================================
 			Nice Select JS
-		==================================*/ 
+		==================================*/
 		$('select').niceSelect();
-		
-		
+
+
 		/*================================
 			Course Single Slider JS
-		==================================*/ 
+		==================================*/
 		$('.course-single-gallery').owlCarousel({
-			items:1,
-			autoplay:true,
-			loop:false,
+			items: 1,
+			autoplay: true,
+			loop: false,
 			animateIn: 'fadeIn',
 			animateOut: 'fadeOut',
-			autoplayTimeout:5000,
-			autoplayHoverPause:true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause: true,
 			smartSpeed: 500,
-			merge:true,
-			nav:true,
+			merge: true,
+			nav: true,
 			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-			dots:false
+			dots: false
 		});
-		
+
 		/*================================
 			Testimonials JS
-		==================================*/ 
+		==================================*/
 		$('.testimonial-slider').owlCarousel({
-			items:1,
-			autoplay:false,
-			autoplayTimeout:3000,
+			items: 1,
+			autoplay: false,
+			autoplayTimeout: 3000,
 			smartSpeed: 500,
-			autoplayHoverPause:true,
-			margin:0,
-			loop:true,
-			merge:true,
-			center:false,
-			nav:false,
-			dots:true,
-		});	
-		
-		
+			autoplayHoverPause: true,
+			margin: 0,
+			loop: true,
+			merge: true,
+			center: false,
+			nav: false,
+			dots: true,
+		});
+
+
 		/*================================
 			News Slider JS
-		==================================*/ 
+		==================================*/
 		$('.news-slider').owlCarousel({
-			autoplay:false,
-			autoplayTimeout:3500,
+			autoplay: false,
+			autoplayTimeout: 3500,
 			smartSpeed: 600,
-			autoplayHoverPause:true,
-			margin:10,
-			loop:true,
-			merge:true,
-			dots:false,
-			nav:true,
+			autoplayHoverPause: true,
+			margin: 10,
+			loop: true,
+			merge: true,
+			dots: false,
+			nav: true,
 			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-			responsive:{
+			responsive: {
 				300: {
-					items:1,
-					nav:false,
+					items: 1,
+					nav: false,
 				},
 				480: {
-					items:1,
-					nav:false,
+					items: 1,
+					nav: false,
 				},
 				768: {
-					items:2,
-					nav:false,
+					items: 2,
+					nav: false,
 				},
 				1170: {
-					items:2,
+					items: 2,
 				},
 			}
-		});	
-		
+		});
+
 		/*================================
 			Events Slider JS
 		==================================*/
 		$('.event-gallery').owlCarousel({
-			items:1,
-			autoplay:false,
-			autoplayTimeout:3500,
+			items: 1,
+			autoplay: false,
+			autoplayTimeout: 3500,
 			smartSpeed: 600,
-			autoplayHoverPause:true,
+			autoplayHoverPause: true,
 			animateOut: 'fadeOut',
 			animateIn: 'fadeIn',
-			margin:0,
-			loop:true,
-			merge:true,
-			nav:true,
+			margin: 0,
+			loop: true,
+			merge: true,
+			nav: true,
 			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-			dots:false,
-		});	
-		
+			dots: false,
+		});
+
 		/*================================
 			Clients Slider JS
 		==================================*/
 		$('.client-slider').owlCarousel({
-			autoplay:false,
-			autoplayTimeout:3500,
+			autoplay: false,
+			autoplayTimeout: 3500,
 			smartSpeed: 600,
-			autoplayHoverPause:true,
-			margin:30,
-			loop:true,
-			merge:true,
-			nav:false,
-			dots:false,
-			responsive:{
+			autoplayHoverPause: true,
+			margin: 30,
+			loop: true,
+			merge: true,
+			nav: false,
+			dots: false,
+			responsive: {
 				300: {
-					items:2,
+					items: 2,
 				},
 				480: {
-					items:3,
+					items: 3,
 				},
 				768: {
-					items:3,
+					items: 3,
 				},
 				1170: {
-					items:4,
+					items: 4,
 				},
 			}
-		});	
-		
+		});
+
 		/*================================
 			Image Gallery JS
 		==================================*/
@@ -186,22 +186,22 @@ Version:	1.0
 			gridAdjustment: 'responsive',
 			gapHorizontal: 20,
 			gapVertical: 20,
-				mediaQueries: [{
-					width: 1100,
-					cols: 3,
-				},{
-					width: 768,
-					cols: 3,
-				}, {
-					width: 480,
-					cols: 2,
-				},{
-					width: 0,
-					cols: 1,
-				}],
-				caption: 'overlayBottomPush',
-				displayType: 'sequentially',
-				displayTypeSpeed: 80,
+			mediaQueries: [{
+				width: 1100,
+				cols: 3,
+			}, {
+				width: 768,
+				cols: 3,
+			}, {
+				width: 480,
+				cols: 2,
+			}, {
+				width: 0,
+				cols: 1,
+			}],
+			caption: 'overlayBottomPush',
+			displayType: 'sequentially',
+			displayTypeSpeed: 80,
 
 			// lightbox
 			lightboxDelegate: '.cbp-lightbox',
@@ -210,34 +210,34 @@ Version:	1.0
 			lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
 		});
 
-		
+
 		/*================================
 			CounterUp JS
 		==================================*/
 		$('.counter').counterUp({
 			delay: 10,
 			time: 4000
-			
-		});	
-		
+
+		});
+
 		/*================================
 			Circle JS
 		==================================*/
 		$('.circle').circleProgress({
 			fill: {
-				color: '#05C46B'
+				color: '#0E3D72'
 			}
 		})
-		
-		
+
+
 		/*================================
 			Faqs JS
 		==================================*/
-		$('.panel').on('click', function() {
-            $(".panel").removeClass("active");
-            $(this).addClass("active");
+		$('.panel').on('click', function () {
+			$(".panel").removeClass("active");
+			$(this).addClass("active");
 		});
-		
+
 		/*================================
 			VideoPopup JS
 		==================================*/
@@ -246,32 +246,32 @@ Version:	1.0
 			removalDelay: 300,
 			mainClass: 'mfp-fade'
 		});
-	
+
 		/*================================
 			Parallax JS
 		==================================*/
 		$(window).stellar({
-            responsive: true,
-            positionProperty: 'position',
+			responsive: true,
+			positionProperty: 'position',
 			horizontalOffset: 0,
 			verticalOffset: 0,
-            horizontalScrolling: false
-        });
-		
+			horizontalScrolling: false
+		});
+
 		/*=====================================
 			Final CountDown
-		======================================*/ 
-		$('[data-countdown]').each(function() {
+		======================================*/
+		$('[data-countdown]').each(function () {
 			var $this = $(this),
 				finalDate = $(this).data('countdown');
-			$this.countdown(finalDate, function(event) {
+			$this.countdown(finalDate, function (event) {
 				$this.html(event.strftime(
 					'<div class="cdown"><span class="days"><strong>%-D</strong><p>Days</p></span></div><div class="cdown"><span class="hour"><strong> %-H</strong><p>Hours</p></span></div> <div class="cdown"><span class="minutes"><strong>%M</strong> <p>Minutes</p></span></div><div class="cdown"><span class="second"><strong> %S</strong><p>Seconds</p></span></div>'
 				));
 			});
 		});
-		
-		
+
+
 		/*================================
 			ScrollUp JS
 		==================================*/
@@ -291,15 +291,15 @@ Version:	1.0
 			activeOverlay: false,        // Set CSS color to display scrollUp active point, e.g '#00FFFF'
 			zIndex: 2147483647           // Z-Index for the overlay
 		});
-	
+
 	});
-		
-		/*================================
-			Preloader JS
-		==================================*/
-		$(window).on('load', function() {
-				$('.book_preload').fadeOut('slow', function(){
-				$(this).remove();
-			});
+
+	/*================================
+		Preloader JS
+	==================================*/
+	$(window).on('load', function () {
+		$('.book_preload').fadeOut('slow', function () {
+			$(this).remove();
 		});
+	});
 })(jQuery);
