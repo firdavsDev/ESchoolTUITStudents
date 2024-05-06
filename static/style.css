@@ -1150,8 +1150,8 @@ Version:	1.0
 }
 
 .teachers .teacher-head img {
-	height: 100%;
-	width: 100%;
+	height: 360px;
+	width: 360px;
 	text-align: center;
 }
 
