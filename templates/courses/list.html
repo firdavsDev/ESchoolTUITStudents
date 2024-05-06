@@ -30,7 +30,7 @@
                 <div class="single-course">
                     <div class="course-head overlay">
                         <img src="{{course.picture.url}}" alt="#">
-                        <a href="#" class="btn white primary">Hozirpq ro'yxatdan o'ting</a>
+                        <a href="{% url 'contact' %}" class="btn white primary">Hoziroq ro'yxatdan o'ting</a>
                     </div>
                     <div class="course-body">
                         <div class="name-price">
@@ -44,14 +44,7 @@
                         <p>{{course.description}}</p>
                     </div>
                     <div class="course-meta">
-                        <ul class="rattings">
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star-half-o"></i></li>
-                            <li class="point"><span>{{course.rank}}</span></li>
-                        </ul>
+
                         <div class="course-info">
                             <span><i class="fa fa-users"></i>{{course.enrolled_students}} Enrolled</span>
                             <span><i class="fa fa-calendar-o"></i>{{course.enrolled_students}} days</span>

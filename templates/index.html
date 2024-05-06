@@ -15,11 +15,13 @@
                             <h1 class="slider-title"><span>Mirzo Ulug'bek tumani</span>
                                 286 - <b>IDUM</b>
                             </h1>
-                            <p class="slider-text">Mirum est notare quam littera gothica, quam nunc putamus parum
-                                claram, anteposuerit litterarum formas humanitatis per seacula There are many variations
-                                of passages of Lorem Ipsum available, but the majority</p>
+                            <p class="slider-text">
+                                O'zbekiston Respublikasi 286-sonloq "Iste'molchilar Dasturiy Ustunliklari Markazi"
+                            </p>
                             <div class="button">
-                                <a href="#" class="btn white primary">Bizning kurslarimiz</a>
+                                <a href="
+                                {% url 'courses_list' %}
+                                " class="btn white primary">Bizning kurslarimiz</a>
                             </div>
                         </div>
                     </div>
@@ -35,8 +37,7 @@
             <div class="col-lg-6 offset-lg-3 col-12">
                 <div class="section-title bg">
                     <h2>Bizning <span>kurslarimiz</span></h2>
-                    <p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own
-                        additions education satisfied the perpetual. If he cause manor happy</p>
+                    <p>Kurslarimiz orqali juda ko'p malumotlar olishingiz mumkin</p>
                     <div class="icon"><i class="fa fa-clone"></i></div>
                 </div>
             </div>
@@ -63,14 +64,6 @@
                         <p>{{course.description}}</p>
                     </div>
                     <div class="course-meta">
-                        <ul class="rattings">
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star-half-o"></i></li>
-                            <li class="point"><span>{{course.rank}}</span></li>
-                        </ul>
                         <div class="course-info">
                             <span><i class="fa fa-users"></i>{{course.enrolled_students}} Enrolled</span>
                             <span><i class="fa fa-calendar-o"></i>{{course.enrolled_students}} days</span>
@@ -96,9 +89,8 @@
                         <i class="fa fa-clone"></i>
                     </div>
                     <div class="feature-content">
-                        <h4 class="f-title">Trending Kurs</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam suscipit fugiat sint totam
-                            soluta assumenda</p>
+                        <h4 class="f-title">Elektron Kurs</h4>
+                        <p>Online darslarimiz orqali bilimingizni mustahkamlab borishingiz mumkin bo'ladi</p>
                     </div>
                 </div>
             </div>
@@ -109,9 +101,10 @@
                         <i class="fa fa-book"></i>
                     </div>
                     <div class="feature-content">
-                        <h4 class="f-title">Kitoblar & Kutubxona</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam suscipit fugiat sint totam
-                            soluta assumenda</p>
+                        <h4 class="f-title">Elektron Kutubxona</h4>
+                        <p>
+                            Online kutubxonamiz orqali o'zingizga kerakli kitoblarni topishingiz mumkin
+                        </p>
                     </div>
                 </div>
             </div>
@@ -123,8 +116,7 @@
                     </div>
                     <div class="feature-content">
                         <h4 class="f-title">Eng Yaxshi Imkoniyatlar</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam suscipit fugiat sint totam
-                            soluta assumenda</p>
+                        <p>O'qishingiz uchun bizning IDUM'da barcha sharoitlar bor</p>
                     </div>
                 </div>
             </div>
@@ -136,8 +128,7 @@
                     </div>
                     <div class="feature-content">
                         <h4 class="f-title">Sertifikatli O'qituvchilar</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam suscipit fugiat sint totam
-                            soluta assumenda</p>
+                        <p>Yaxshi natijalar bor bollar uchun serti sertifikatlar beriladi.</p>
                     </div>
                 </div>
             </div>
@@ -151,8 +142,7 @@
             <div class="col-lg-6 offset-lg-3 col-12">
                 <div class="section-title bg">
                     <h2>Kelajakdagi <span>Tadbirlar</span></h2>
-                    <p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own
-                        additions education satisfied the perpetual. If he cause manor happy</p>
+                    <p>Qiziq bo'lgan tadbirlar uyishtirib boriladi</p>
                     <div class="icon"><i class="fa fa-paper-plane"></i></div>
                 </div>
             </div>
@@ -197,14 +187,12 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-12">
                     <div class="text-content">
-                        <h2>Biz <span>Brendlar, Mahsulotlar & Kampaniyalar</span>ga e'tibor qaratamiz</h2>
-                        <p>facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo
-                            rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                            egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci,
-                            pharetra at dictum consequat, pretium pretium nulla</p>
+                        <h2>Biz <span>Hamkorlarimiz</span>ga e'tibor qaratamiz</h2>
+                        <p>Online darslarimiz hamkorlik qilish istakida bo'lgan yosh tajribali domlalar bilan
+                            hamkorlikga doim tayyormiz</p>
                         <div class="button">
-                            <a class="btn white" href="contact.html">Biz bilan bog'laning</a>
-                            <a class="btn white primary" href="courses.html">Kurslarni ko'rish</a>
+                            <a class="btn white" href="{% url 'contact' %}">Biz bilan bog'laning</a>
+                            <a class="btn white primary" href="{% url 'courses_list' %}">Kurslarni ko'rish</a>
                         </div>
                     </div>
                 </div>
@@ -218,14 +206,13 @@
     </div>
 </section>
 
-<section class="faqs section">
+<section class="faqs section" id="faq">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3 col-12">
                 <div class="section-title bg">
                     <h2>Tez-tez So'raladigan <span>Savollar</span></h2>
-                    <p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own
-                        additions education satisfied the perpetual. If he cause manor happy</p>
+                    <p>Bizga ko'p berilayotgan savolar ro'yxati orqali o'z savolingizga javob toping</p>
                     <div class="icon"><i class="fa fa-question"></i></div>
                 </div>
             </div>
@@ -240,25 +227,20 @@
                 <div class="faq-main">
                     <div class="faq-content">
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                            <div class="panel panel-default">
+                            <div class="panel panel-default active">
                                 <div class="faq-heading" id="FaqTitle1">
                                     <h4 class="faq-title">
                                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-                                            href="#faq1"><i class="fa fa-question"></i>Biz yangi dasturxona ishga
-                                            tushirdik!</a>
+                                            href="#faq1"><i class="fa fa-question"></i>Yangi darslar qachondan ishga
+                                            tushuriladi?</a>
                                     </h4>
                                 </div>
-                                <div id="faq1" class="panel-collapse collapse" role="tabpanel"
+                                <div id="faq1" class="panel-collapse collapse show" role="tabpanel"
                                     aria-labelledby="FaqTitle1">
-                                    <div class="faq-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae.
-                                        Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus
-                                        et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar,
-                                        laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum
-                                        consequat</div>
+                                    <div class="faq-body">Tez kunlarda</div>
                                 </div>
                             </div>
-                            <div class="panel panel-default active">
+                            <div class="panel panel-default ">
                                 <div class="faq-heading" id="FaqTitle2">
                                     <h4 class="faq-title">
                                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
@@ -266,26 +248,8 @@
                                             Pellentesque</a>
                                     </h4>
                                 </div>
-                                <div id="faq2" class="panel-collapse collapse show" role="tabpanel"
+                                <div id="faq2" class="panel-collapse collapse" role="tabpanel"
                                     aria-labelledby="FaqTitle2">
-                                    <div class="faq-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae.
-                                        Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus
-                                        et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar,
-                                        laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum
-                                        consequat</div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="faq-heading" id="FaqTitle3">
-                                    <h4 class="faq-title">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-                                            href="#faq3"><i class="fa fa-question"></i>Suspendisse facilisis ultricies
-                                            tortor, nec sollicitudin</a>
-                                    </h4>
-                                </div>
-                                <div id="faq3" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="FaqTitle3">
                                     <div class="faq-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                         Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae.
                                         Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus
@@ -312,24 +276,7 @@
                                         consequat</div>
                                 </div>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="faq-heading" id="FaqTitle5">
-                                    <h4 class="faq-title">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-                                            href="#faq5"><i class="fa fa-question"></i>Cras nulla orci, pharetra at
-                                            dictum consequat</a>
-                                    </h4>
-                                </div>
-                                <div id="faq5" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="FaqTitle5"></div>
-                                <div class="faq-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae.
-                                    Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus
-                                    et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar,
-                                    et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar,
-                                    laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum
-                                    consequat</div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -344,8 +291,11 @@
         <div class="row">
             <div class="col-lg-4 col-md-4 col-12">
                 <div class="text-content">
-                    <h4>Our Awesome Clients!</h4>
-                    <p>Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Et harum quidem
+                    <h4>Biznig mijozlarimiz!</h4>
+                    <p>Biz o'z talaba, o'quvchilarimizni o'zimizga qiziqarli qilishga harakat qilamiz. Bizning
+                        o'quvchilarimizning fikrlarini o'rganing va bizning faoliyatimizni o'zgartirish uchun
+                        takliflaringizni qoldiring. Bizning o'quvchilarimizning fikrlarini o'rganing va bizning
+                        faoliyatimizni o'zgartirish uchun takliflaringizni qoldiring.
                     </p>
                 </div>
             </div>

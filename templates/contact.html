@@ -15,7 +15,7 @@
             <div class="col-lg-6 col-md-6 col-12">
                 <ul class="bread-list">
                     <li><a href="/">Home<i class="fa fa-angle-right"></i></a></li>
-                    <li class="active"><a href="{% url 'contact' %}">contact</a></li>
+                    <li class="active"><a href="{% url 'contact' %}">bog'lanish</a></li>
                 </ul>
             </div>
         </div>
@@ -28,8 +28,9 @@
             <div class="col-lg-6 offset-lg-3 col-12">
                 <div class="section-title bg">
                     <h2>Biz bilan <span>bog'laning</span></h2>
-                    <p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own
-                        additions education satisfied the perpetual. If he cause manor happy</p>
+                    <p>
+                        Biz bilan bog'lanish uchun quyidagi formani to'ldiring. Biz sizga tez orada javob beramiz.
+                    </p>
                     <div class="icon"><i class="fa fa-paper-plane"></i></div>
                 </div>
             </div>
@@ -37,7 +38,7 @@
         <div class="row">
             <div class="col-lg-8 col-md-8 col-12">
                 <div class="form-head">
-                    <form class="form" action="{% url 'contact' %}" method="post">
+                    <form class="form" action="{% url 'contact' %}" method="post" onsubmit="onClick()">
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
@@ -60,9 +61,8 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="form-group">
-                                    <i class="fa fa-envelope"></i>
-                                    <input name="website" type="url" placeholder="Website url (https://)"
-                                        value="https://">
+                                    <i class="fa fa-phone"></i>
+                                    <input name="phone" type="phone" placeholder="Telefon raqam" required>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -87,15 +87,13 @@
                     <div class="contact-info">
                         <div class="icon"><i class="fa fa-map"></i></div>
                         <h3>Biznig manzil</h3>
-                        <p>60 Grant ave. Central New Road 0708, United states of America</p>
+                        <p>O'zbekiston, Toshkent, Mirzo-ulug'bek tumani,
+                            shaharcha ULUGBEK, DO'STLIK ko'chasi, 7</p>
                     </div>
                     <div class="contact-info">
                         <div class="icon"><i class="fa fa-envelope"></i></div>
-                        <h3>contact information</h3>
-                        <p><a
-                                href="https://e.mail.ru/inbox/?app_id_mytracker=52848&authid=ko9qqcls.fp&back=1&dwhsplit=s10273.b1s&from=login&x-login-auth=1&new_reg=1&newreg=1">ITprocontactt@gmail.com</a>
-                        </p>
-                        <p>+998 99 770 73 75</p>
+                        <h3>Bog'lanish</h3>
+                        <p>+998 71 2892562</p>
                     </div>
                 </div>
             </div>
@@ -109,7 +107,8 @@
             <div class="col-lg-4 col-12">
                 <div class="text-content">
                     <h4>Bizning mijozlar!</h4>
-                    <p>Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Et harum quidem
+                    <p>
+                        Bizning mijozlarimiz bilan tanishing. Biz mijozlarimiz qadrlaymiz.
                     </p>
                 </div>
             </div>
@@ -142,11 +141,10 @@
     </div>
 </div>
 
-{% endblock %}
 
 <script>
-    //after send form get status response and show alert
-    function onClick() {
-        alert("Xabar yuborildi");
+    onClick = () => {
+        alert('Xabaringiz uchun rahmat! Tez orada siz bilan bog\'lanamiz');
     }
 </script>
+{% endblock %}

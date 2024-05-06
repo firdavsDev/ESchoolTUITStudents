@@ -7,6 +7,8 @@ class Contact(models.Model):
     last_name = models.CharField(_('last name'), max_length=30)
     email = models.EmailField(_('email address'))
     website = models.URLField(_('website'), blank=True, null=True)
+    phone = models.CharField(
+        _('phone number'), max_length=15, blank=True, null=True)
     message = models.TextField(_('message'))
     is_asnwered = models.BooleanField(_('is answered'), default=False)
     # Timestamps
