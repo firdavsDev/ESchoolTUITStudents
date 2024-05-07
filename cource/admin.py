@@ -15,7 +15,7 @@ class CourseAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
     fieldsets = (
         (None, {
-            'fields': ('title', 'description', 'teacher', 'picture')
+            'fields': ('title', 'description', 'teacher', 'picture', 'youtube_video_url')
         }),
         ('Course Details', {
             'fields': ('is_free', 'rank', 'duration', 'enrolled_students', 'price', 'start_date', 'end_date')

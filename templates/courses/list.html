@@ -9,12 +9,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-12">
-                <h2>Bizning kurslar</h2>
+                <h2>Bizning darslar</h2>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
                 <ul class="bread-list">
                     <li><a href="/">Asosiy<i class="fa fa-angle-right"></i></a></li>
-                    <li class="active"><a href="#">Kurslarimiz<i class="fa fa-angle-right"></i></a></li>
+                    <li class="active"><a href="#">Darslar<i class="fa fa-angle-right"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -28,9 +28,10 @@
             {% for course in courses %}
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="single-course">
-                    <div class="course-head overlay">
+                    <div class="course-head">
                         <img src="{{course.picture.url}}" alt="#">
-                        <a href="{% url 'contact' %}" class="btn white primary">Hoziroq ro'yxatdan o'ting</a>
+                        <video src="{{ course.youtube_video_url }}" preload="auto" autoplay="" controls=""
+                            style="width: 100%; height: 100%;"></video>
                     </div>
                     <div class="course-body">
                         <div class="name-price">

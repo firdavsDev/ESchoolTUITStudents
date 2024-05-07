@@ -8,6 +8,8 @@ from teachers.models import Teacher
 class Course(models.Model):
     title = models.CharField(_('title'), max_length=100, unique=True, db_index=True, help_text=_(
         'The title of the course.'), blank=True, null=True)
+    youtube_video_url = models.URLField(
+        _('youtube video url'), blank=True, null=True)
     description = models.TextField(_('description'), blank=True)
     teacher = models.ForeignKey(
         Teacher, on_delete=models.CASCADE, related_name='courses', verbose_name=_('teacher'), blank=True, null=True)
