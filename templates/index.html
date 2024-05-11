@@ -55,7 +55,11 @@
                     <div class="course-body">
                         <div class="name-price">
                             <div class="teacher-info">
+                                {% if course.teacher.profile_picture %}
                                 <img src="{{course.teacher.profile_picture.url}}" alt="#">
+                                {% else %}
+                                <img src="{% static 'images/teacher.jpg' %}" alt="#">
+                                {% endif %}
                                 <h4 class="title">{{course.teacher.full_name}}</h4>
                             </div>
                             <span class="price">${{course.price}}</span>

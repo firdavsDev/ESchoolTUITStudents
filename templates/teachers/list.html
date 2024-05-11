@@ -40,7 +40,11 @@
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="single-teacher">
                     <div class="teacher-head overlay">
+                        {% if teacher.profile_picture %}
                         <img src="{{ teacher.profile_picture.url }}" alt="#">
+                        {% else %}
+                        <img src="{% static 'images/teacher.jpg' %}" alt="#">
+                        {% endif %}
                         <ul class="social">
                             <li><a href="https://t.me/{{ teacher.tg_username }}" target="_blank"><i
                                         class="fa fa-telegram"></i></a></li>
