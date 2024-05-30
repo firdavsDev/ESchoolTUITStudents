@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 
 
 # Add this import
-from config.views import home
+from .views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),

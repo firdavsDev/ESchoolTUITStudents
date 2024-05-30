@@ -40,7 +40,11 @@
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="single-event">
                     <div class="event-image">
+                        {% if event.image %}
                         <img src="{{ event.image.url }}" alt="#" width="614px" height="315px">
+                        {% else %}
+                        <img src="#" alt="#" width="614px" height="315px">
+                        {% endif %}
                         <div class="event-date">
                             <p>
                                 {{ event.date|date:"d" }}<span>{{ event.date|date:"M" }}</span>
